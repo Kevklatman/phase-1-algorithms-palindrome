@@ -1,27 +1,23 @@
 function isPalindrome(str) {
-  for (let i = 0; i < str.length / 2; i++) {
-    if (str[i] !== str[str.length - 1 - i]) {
-      return false;
-    }
-  }
-  return true;
+  const reversedStr = str.split('').reverse().join('');
+  return str === reversedStr;
 }
 
 
 /* 
   Add your pseudocode here
-Define a function isPalindrome that takes str as an argument.
-Loop through the string from the start to the middle:
-For each character at position i, compare it with the character at position length - 1 - i.
-If any characters don't match, return false.
-If the loop completes without finding mismatches, return true.
-
+separate the string into its individual characters
+reverse the string
+put it back together
+compare it to the original string to see if it's the same
+return true if they are the same false if not
 /*
-1. The function isPalindrome takes a single argument str, which is the string to check.
-Loop Through the String:
-The loop runs from the start of the string to the middle. (because second half of word is same)
-2. For each character at position i, compare it with the character at position str.length - 1 - i.
-If these characters are different, the string is not a palindrome, and the function returns false.
+Use split('') to convert the string into an array of characters.
+Use reverse() to reverse the array.
+Use join('') to convert the reversed array back into a string.
+Check if the reversed string is equal to the original string.
+Return true if they are the same, indicating the string is a palindrome.
+Otherwise, return false.
 */
 
 // You can run `node index.js` to view these console logs
